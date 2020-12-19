@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :trello_tasker, TrelloTasker.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "admin",
+  password: "admin",
   database: "trello_tasker_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
