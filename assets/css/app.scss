@@ -1,6 +1,16 @@
-/* This file is for your main application css. */
-//@import "./phoenix.css";
+
+
+$bg-color: #fff;
+$detail-color : #ffe9ce;
+$detail-color-2 : navy;
+$detail-color-3 : #24252a;
+$error: red;
+$gradient-detail: linear-gradient(-45deg , $detail-color , $bg-color);
+@import "global";
+@import "card/index/index";
+
 @import "../node_modules/nprogress/nprogress.css";
+
 
 /* LiveView specific classes for your customizations */
 /*
