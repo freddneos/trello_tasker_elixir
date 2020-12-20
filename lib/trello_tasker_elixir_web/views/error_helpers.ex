@@ -1,4 +1,4 @@
-defmodule TrelloTaskerWeb.ErrorHelpers do
+defmodule TrelloTaskerElixirWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule TrelloTaskerWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(TrelloTaskerWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(TrelloTaskerElixirWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(TrelloTaskerWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(TrelloTaskerElixirWeb.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -1,5 +1,5 @@
-defmodule TrelloTaskerWeb.ErrorView do
-  use TrelloTaskerWeb, :view
+defmodule TrelloTaskerElixirWeb.ErrorView do
+  use TrelloTaskerElixirWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

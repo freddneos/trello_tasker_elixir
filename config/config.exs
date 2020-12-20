@@ -7,16 +7,16 @@
 # General application configuration
 use Mix.Config
 
-config :trello_tasker,
-  ecto_repos: [TrelloTasker.Repo]
+config :trello_tasker_elixir,
+  ecto_repos: [TrelloTaskerElixir.Repo]
 
 # Configures the endpoint
-config :trello_tasker, TrelloTaskerWeb.Endpoint,
+config :trello_tasker_elixir, TrelloTaskerElixirWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "22yaWuW4Tw+YQiwoK1y/bbwYaZeeJ3WHpomu/EDUAQd1aGDUkWbf+VTZ6Zyh655t",
-  render_errors: [view: TrelloTaskerWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: TrelloTasker.PubSub,
-  live_view: [signing_salt: "iXHcBCtc"]
+  secret_key_base: "4Zi0x+3+YFfWSGop4skYMRF9mw0Yw69o+rDJueGi5PyRUxWeTKSTkycbdojjfw+0",
+  render_errors: [view: TrelloTaskerElixirWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: TrelloTaskerElixir.PubSub,
+  live_view: [signing_salt: "QHgBRm++"]
 
 # Configures Elixir's Logger
 config :logger, :console,

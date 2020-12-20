@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(TrelloTasker.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(TrelloTaskerElixir.Repo, :manual)

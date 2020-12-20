@@ -1,6 +1,6 @@
-defmodule TrelloTasker do
+defmodule TrelloTaskerElixir do
   @moduledoc """
-  TrelloTasker keeps the contexts that define your domain
+  TrelloTaskerElixir keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

@@ -1,16 +1,16 @@
-defmodule TrelloTaskerWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :trello_tasker
+defmodule TrelloTaskerElixirWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :trello_tasker_elixir
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_trello_tasker_key",
-    signing_salt: "5N0qeFL/"
+    key: "_trello_tasker_elixir_key",
+    signing_salt: "YjZ06Qb6"
   ]
 
-  socket "/socket", TrelloTaskerWeb.UserSocket,
+  socket "/socket", TrelloTaskerElixirWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule TrelloTaskerWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :trello_tasker,
+    from: :trello_tasker_elixir,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule TrelloTaskerWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :trello_tasker
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :trello_tasker_elixir
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -50,5 +50,5 @@ defmodule TrelloTaskerWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug TrelloTaskerWeb.Router
+  plug TrelloTaskerElixirWeb.Router
 end

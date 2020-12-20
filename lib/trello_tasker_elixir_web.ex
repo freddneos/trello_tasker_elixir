@@ -1,12 +1,12 @@
-defmodule TrelloTaskerWeb do
+defmodule TrelloTaskerElixirWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use TrelloTaskerWeb, :controller
-      use TrelloTaskerWeb, :view
+      use TrelloTaskerElixirWeb, :controller
+      use TrelloTaskerElixirWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,24 +19,42 @@ defmodule TrelloTaskerWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: TrelloTaskerWeb
+      use Phoenix.Controller, namespace: TrelloTaskerElixirWeb
 
       import Plug.Conn
-      import TrelloTaskerWeb.Gettext
-      alias TrelloTaskerWeb.Router.Helpers, as: Routes
+      import TrelloTaskerElixirWeb.Gettext
+      alias TrelloTaskerElixirWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/trello_tasker_web/templates",
-        namespace: TrelloTaskerWeb
+        root: "lib/trello_tasker_elixir_web/templates",
+        namespace: TrelloTaskerElixirWeb
 
       # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
+      import Phoenix.Controller,
+        only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
 
       # Include shared imports and aliases for views
+      unquote(view_helpers())
+    end
+  end
+
+  def live_view do
+    quote do
+      use Phoenix.LiveView,
+        layout: {TrelloTaskerElixirWeb.LayoutView, "live.html"}
+
+      unquote(view_helpers())
+    end
+  end
+
+  def live_component do
+    quote do
+      use Phoenix.LiveComponent
+
       unquote(view_helpers())
     end
   end
@@ -47,13 +65,14 @@ defmodule TrelloTaskerWeb do
 
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
   def channel do
     quote do
       use Phoenix.Channel
-      import TrelloTaskerWeb.Gettext
+      import TrelloTaskerElixirWeb.Gettext
     end
   end
 
@@ -62,12 +81,15 @@ defmodule TrelloTaskerWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
+      # Import LiveView helpers (live_render, live_component, live_patch, etc)
+      import Phoenix.LiveView.Helpers
+
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import TrelloTaskerWeb.ErrorHelpers
-      import TrelloTaskerWeb.Gettext
-      alias TrelloTaskerWeb.Router.Helpers, as: Routes
+      import TrelloTaskerElixirWeb.ErrorHelpers
+      import TrelloTaskerElixirWeb.Gettext
+      alias TrelloTaskerElixirWeb.Router.Helpers, as: Routes
     end
   end
 

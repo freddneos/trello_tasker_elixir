@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :trello_tasker, TrelloTasker.Repo,
-  username: "admin",
-  password: "admin",
-  database: "trello_tasker_dev",
+config :trello_tasker_elixir, TrelloTaskerElixir.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "trello_tasker_elixir_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :trello_tasker, TrelloTasker.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :trello_tasker, TrelloTaskerWeb.Endpoint,
+config :trello_tasker_elixir, TrelloTaskerElixirWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :trello_tasker, TrelloTaskerWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :trello_tasker, TrelloTaskerWeb.Endpoint,
+config :trello_tasker_elixir, TrelloTaskerElixirWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/trello_tasker_web/(live|views)/.*(ex)$",
-      ~r"lib/trello_tasker_web/templates/.*(eex)$"
+      ~r"lib/trello_tasker_elixir_web/(live|views)/.*(ex)$",
+      ~r"lib/trello_tasker_elixir_web/templates/.*(eex)$"
     ]
   ]
 

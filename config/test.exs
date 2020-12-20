@@ -5,16 +5,16 @@ use Mix.Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :trello_tasker, TrelloTasker.Repo,
+config :trello_tasker_elixir, TrelloTaskerElixir.Repo,
   username: "postgres",
   password: "postgres",
-  database: "trello_tasker_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "trello_tasker_elixir_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :trello_tasker, TrelloTaskerWeb.Endpoint,
+config :trello_tasker_elixir, TrelloTaskerElixirWeb.Endpoint,
   http: [port: 4002],
   server: false
 
