@@ -7,7 +7,7 @@ database_url =
     For example: ecto://USER:PASS@HOST/DATABASE
     """
 
-config :trello_tasker, TrelloTasker.Repo,
+config :trello_tasker, TrelloTaskerElixirWeb.Repo,
   # ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
@@ -19,7 +19,7 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-config :trello_tasker, TrelloTaskerWeb.Endpoint,
+config :trello_tasker, TrelloTaskerElixirWeb.Endpoint,
   http: [
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
@@ -28,4 +28,4 @@ config :trello_tasker, TrelloTaskerWeb.Endpoint,
   check_origin: false,
   show_sensitive_data_on_connection_error: true
 
-config :trello_tasker, TrelloTaskerWeb.Endpoint, server: true
+config :trello_tasker, TrelloTaskerElixirWeb.Endpoint, server: true
