@@ -1,14 +1,15 @@
-
-
-$bg-color: #fff;
-$detail-color : #ffe9ce;
-$detail-color-2 : navy;
+$bg-color: #121212;
+$detail-color : #000000;
+$detail-color-2 :#1db954;
 $detail-color-3 : #24252a;
+$detail-color-4 : #2e77d0;
+$detail-color-5 : #b3b3b3;
+
 $error: red;
-$gradient-detail: linear-gradient(-45deg , $detail-color , $bg-color);
+$gradient-detail: linear-gradient(-45deg, $detail-color, $bg-color);
 @import "global";
 @import "card/index/index";
-
+@import "card/info/info";
 @import "../node_modules/nprogress/nprogress.css";
 
 

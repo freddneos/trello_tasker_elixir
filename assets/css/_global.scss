@@ -40,11 +40,13 @@ button {
     justify-content: space-between;
 
     strong{
-        color: #000
+        font-size: 30px;
+        color: $detail-color-4;
     }
 
     a{
-        color:$detail-color-2;
+        font-size: 20px;
+        color:$detail-color-4;
         text-decoration:none;
         display: flex;
         align-items: center;

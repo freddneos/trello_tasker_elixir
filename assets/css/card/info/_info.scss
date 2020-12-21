@@ -1,0 +1,61 @@
+section.card-info {
+    margin-top: 40px;
+
+    header {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            border-radius: 2%;
+        }
+    }
+
+    ul {
+        margin-top: 20px;
+        display: flex;
+        list-style: none;
+
+        li {
+            &+li {
+                margin-left: 40px
+            }
+        }
+
+        span {
+            font-size: 16px;
+            color: $detail-color-5;;
+
+            i {
+                color: $detail-color-4;
+            }
+        }
+
+    }
+
+
+    .info {
+        margin-top: 20px;
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        min-height: 700px;
+        background-color: $detail-color;
+        border-radius: 2%;
+
+        strong {
+            color: $detail-color-2;
+            font-size: 34px;
+            padding: 34px;
+            display: block;
+        }
+        p{
+            color: $detail-color-5;
+            padding:40px
+        }
+    }
+
+    .comments{
+        @import "comments";
+    }
+}
