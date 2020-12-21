@@ -22,6 +22,10 @@ config :trello_tasker_elixir, TrelloTaskerElixirWeb.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+#Trello
+config :trello_tasker_elixir, :trello,
+  key: System.get_env("TRELLO_KEY"),
+  token: System.get_env("TRELLO_TOKEN")
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
