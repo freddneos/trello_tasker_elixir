@@ -7,7 +7,7 @@ database_url =
     For example: ecto://USER:PASS@HOST/DATABASE
     """
 
-config :trello_tasker_elixir, TrelloTaskerElixirWeb.Repo,
+config :trello_tasker_elixir, TrelloTaskerElixir.Repo,
   # ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
