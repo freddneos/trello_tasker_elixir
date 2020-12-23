@@ -1,20 +1,19 @@
 <section class="card-info">
     <header>
-        <img src="https://embedwistia-a.akamaihd.net/deliveries/c66d5186bd06bde5f82c6774dde7eac51f033c1c.webp?image_crop_resized=1280x720"
-            alt="">
+        <img src="<%= @post.post_image %>" alt="">
     </header>
 
     <ul>
         <li>
             <span>
                 <i class="fa fa-clock"></i>
-                horario tal
+                <%= @post.post_date %>
             </span>
         </li>
         <li>
             <span>
                 <i class="fa fa-user"></i>
-                Done
+                Frederico Bezerra
             </span>
         </li>
     </ul>
@@ -23,42 +22,9 @@
     <div class="info">
 
         <div>
-            <strong>Aprendendo Elixir</strong>
+            <strong><%= @post.post_title %></strong>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum turpis vitae tempor posuere.
-                Donec suscipit nisi sit amet mollis consectetur. Praesent blandit quam nisl, nec tempus augue egestas
-                vitae. Etiam scelerisque neque nibh, id cursus elit consequat non. Praesent ut fringilla sapien.
-                Suspendisse turpis tellus, fringilla scelerisque quam a, elementum fermentum nisi. Sed tincidunt
-                molestie dolor congue tempus. Quisque sed suscipit velit. Duis convallis maximus justo, ac imperdiet
-                nunc scelerisque nec. Maecenas nisi risus, aliquam at consectetur ut, sagittis ornare quam. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-
-                Duis gravida facilisis placerat. Etiam mollis porta purus, sed dignissim ex porttitor id. Aenean et
-                sodales metus. Fusce tempus vestibulum iaculis. Nam at facilisis urna, vitae pharetra ex. Morbi a ipsum
-                sed urna sollicitudin iaculis. Donec non ipsum ac massa sollicitudin consectetur.
-
-                Pellentesque quam dui, lobortis nec interdum at, bibendum quis elit. Aliquam pulvinar, neque vitae
-                semper congue, nulla sem ornare ante, vel ultricies sem tellus at sem. Phasellus sed elementum massa.
-                Vestibulum tempor vitae arcu ac lacinia. Sed tristique rutrum dolor, et fermentum risus volutpat sed.
-                Etiam lobortis tortor nec orci faucibus pulvinar. Vivamus blandit volutpat tellus, eget semper ante
-                imperdiet ac. Maecenas mollis tellus ipsum, sed sagittis nunc laoreet sed. Ut posuere ullamcorper ipsum,
-                id egestas dui efficitur nec. Integer pharetra nibh metus, a suscipit nisi fringilla vel. Aenean
-                scelerisque lorem at porttitor iaculis. Donec et lorem sollicitudin, pharetra odio eget, aliquam nunc.
-                Nulla lectus lacus, malesuada et feugiat nec, aliquet ac lorem. Suspendisse dignissim aliquam lectus et
-                dapibus. Phasellus in dolor sapien. Nulla luctus venenatis egestas.
-
-                Fusce varius felis turpis, id finibus nibh tempor eget. Praesent et ante pellentesque, tempus eros vel,
-                dapibus sapien. Etiam nec ligula quam. Donec nec nisl vulputate, venenatis tellus nec, feugiat nibh. Sed
-                placerat justo ac libero semper, non scelerisque elit aliquam. Vestibulum ante ipsum primis in faucibus
-                orci luctus et ultrices posuere cubilia curae; Sed vehicula lorem quis eros sollicitudin, et volutpat
-                lorem pharetra. Duis tristique, orci ac egestas aliquet, dolor magna rhoncus mauris, quis consequat dui
-                nibh sed urna.
-
-                Donec eu urna et dui aliquet mattis at eget ante. Nunc purus quam, pellentesque in mi quis, molestie
-                semper sem. Curabitur convallis felis eget ultrices accumsan. Aenean tincidunt fermentum velit sed
-                vehicula. Aenean molestie vulputate massa in viverra. Maecenas vestibulum rutrum eros, at efficitur
-                sapien commodo iaculis. Morbi dapibus lorem lacus, non tincidunt lorem auctor sed. Pellentesque dapibus
-                ipsum tempus, ultricies ante vitae, ultricies enim. Nulla et neque et urna commodo sodales ac nec nunc.
+                <%= @post.post_content %>
             </p>
         </div>
 
@@ -67,26 +33,6 @@
 
     </div>
     <div class="comments">
-        <div class="comment" href="/">
-            <img src="https://embedwistia-a.akamaihd.net/deliveries/c66d5186bd06bde5f82c6774dde7eac51f033c1c.webp?image_crop_resized=1280x720"
-                alt="">
-            <div>
-                <strong>Aprendendo Elixir</strong>
-                <p>
-                    Explicar conceitos de live view
-                </p>
-            </div>
-        </div>
-        <div class="comment" href="/">
-            <img src="https://embedwistia-a.akamaihd.net/deliveries/c66d5186bd06bde5f82c6774dde7eac51f033c1c.webp?image_crop_resized=1280x720"
-                alt="">
-            <div>
-                <strong>Aprendendo Elixir</strong>
-                <p>
-                    Explicar conceitos de live view
-                </p>
-            </div>
-        </div>
         <div class="comment" href="/">
             <img src="https://embedwistia-a.akamaihd.net/deliveries/c66d5186bd06bde5f82c6774dde7eac51f033c1c.webp?image_crop_resized=1280x720"
                 alt="">

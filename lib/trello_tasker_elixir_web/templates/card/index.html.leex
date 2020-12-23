@@ -7,29 +7,17 @@
     </form>
 
     <div class="cards">
-        <a href="/">
-            <img src="https://embedwistia-a.akamaihd.net/deliveries/c66d5186bd06bde5f82c6774dde7eac51f033c1c.webp?image_crop_resized=1280x720"
-                alt="">
-            <div>
-                <strong>Aprendendo Elixir</strong>
-                <p>
-                    Explicar conceitos de live view
-                </p>
-            </div>
+        <%=for post <- @posts_list do %>
+        <%= live_redirect to: Routes.card_info_path(@socket , :index , post.post_id) do %>
+        <div>
+            <strong><%= post.post_title%></strong>
+            <p>
+                <%= String.slice(post.post_content , 0..50)<> "..."%>
+            </p>
+        </div>
 
-            <i class="fa fa-caret-right"></i>
-        </a>
-          <a href="/">
-            <img src="https://embedwistia-a.akamaihd.net/deliveries/c66d5186bd06bde5f82c6774dde7eac51f033c1c.webp?image_crop_resized=1280x720"
-                alt="">
-            <div>
-                <strong>NeoVim do jeito certo</strong>
-                <p>
-                    Explicar conceitos de live view
-                </p>
-            </div>
-
-            <i class="fa fa-caret-right"></i>
-        </a>
+        <i class="fa fa-caret-right"></i>
+        <%end %>
+        <%end %>
     </div>
 </section>
